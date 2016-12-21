@@ -12,7 +12,7 @@ private:
 	ifstream inputfile;
 
 public:
-	template<typename T> Reader(const T& path);
+	template<typename T> Reader(const T& path) : inputfile(path) {}
 	vector<string> read();
 };
 

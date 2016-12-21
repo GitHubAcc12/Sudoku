@@ -6,9 +6,6 @@
 
 using namespace std;
 
-template<typename T> Reader::Reader(const T& path) : inputfile(path)
-{
-}
 
 vector<string> Reader::read()
 {
