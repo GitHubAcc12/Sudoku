@@ -5,7 +5,8 @@
 
 int main()
 {
-	Reader r("C:\\Users\\Jan_\\Desktop\\Sudoku1.txt");
+	auto path = "C:\\Users\\Jan_\\Desktop\\Sudoku1.txt";
+	Reader<decltype(path)> r(path);
 	for (const string& line : r.read())
 	{
 		cout << line << endl;
