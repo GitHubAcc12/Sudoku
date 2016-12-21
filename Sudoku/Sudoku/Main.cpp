@@ -5,7 +5,7 @@
 
 int main()
 {
-	auto path = "C:\\Users\\Jan_\\Desktop\\Sudoku1.txt";
+	auto path = "Sudoku1.txt";
 	Reader<decltype(path)> r(path);
 	for (const string& line : r.read())
 	{

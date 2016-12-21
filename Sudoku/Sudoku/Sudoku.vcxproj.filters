@@ -29,5 +29,11 @@
     <ClInclude Include="Reader.h">
       <Filter>Header Files\IO</Filter>
     </ClInclude>
+    <ClInclude Include="Writer.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Debug\Sudoku1.txt" />
   </ItemGroup>
 </Project>
