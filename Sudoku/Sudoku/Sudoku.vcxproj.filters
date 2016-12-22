@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Tests">
       <UniqueIdentifier>{76b4aa58-6461-4274-8429-cc7bfc719780}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Algorithm">
+      <UniqueIdentifier>{a7a21dc0-0868-420c-9081-2f884e5a4993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Algorithm">
+      <UniqueIdentifier>{48be36dc-5c67-4451-a0b1-ecb89bd75668}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,6 +39,9 @@
     <ClCompile Include="Writer.cpp">
       <Filter>Source Files\IO</Filter>
     </ClCompile>
+    <ClCompile Include="Sudoku.cpp">
+      <Filter>Source Files\Algorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Reader.h">
@@ -43,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="IOTests.h">
       <Filter>Header Files\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Sudoku.h">
+      <Filter>Header Files\Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>Header Files\Algorithm</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
