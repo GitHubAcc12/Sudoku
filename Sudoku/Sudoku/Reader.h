@@ -4,15 +4,17 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <iostream>
+
 using namespace std;
 
-template<typename T> class Reader
+class Reader
 {
 private:
 	ifstream inputfile;
 
 public:
-	Reader(const T& path) : inputfile(path) {}
+	Reader(const char* path) : inputfile(path) {}
 	vector<string> read()
 	{
 		vector<string> lines;
@@ -23,6 +25,7 @@ public:
 			lines.push_back(s);
 		}
 		if (inputfile.fail()) cout << "Fehler beim Einlesen" << endl;
+		inputfile.close();
 		return lines;
 	}
 };

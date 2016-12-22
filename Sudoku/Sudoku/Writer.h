@@ -6,19 +6,22 @@
 
 using namespace std;
 
-template<typename T> class Writer
+class Writer
 {
 private:
 	ofstream outputfile;
 
 public:
-	Writer(const T& path) : outputfile(path) {}
+	Writer(const char* path) : outputfile(path, ios::app) {}
 	void write(const vector<string>& lines)
 	{
+		int i = 0;
 		for (const string& line : lines)
 		{
-			outputfile << line << endl;
+			outputfile << line << endl; //Fehler beim Einlesen
 		}
+		outputfile.flush();
+		outputfile.close();
 	}
 };
 
