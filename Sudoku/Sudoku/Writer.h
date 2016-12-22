@@ -3,26 +3,20 @@
 
 #include <fstream>
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
 class Writer
 {
 private:
-	ofstream outputfile;
+	const char* path;
 
 public:
-	Writer(const char* path) : outputfile(path, ios::app) {}
-	void write(const vector<string>& lines)
-	{
-		int i = 0;
-		for (const string& line : lines)
-		{
-			outputfile << line << endl; //Fehler beim Einlesen
-		}
-		outputfile.flush();
-		outputfile.close();
-	}
+	Writer(const char* path) : path(path) {}
+	void write(const vector<string>& lines);
+	void clear();
 };
 
 

@@ -3,31 +3,17 @@
 
 #include <fstream>
 #include <vector>
-#include <string>
-#include <iostream>
 
 using namespace std;
 
 class Reader
 {
 private:
-	ifstream inputfile;
+	const char* path;
 
 public:
-	Reader(const char* path) : inputfile(path) {}
-	vector<string> read()
-	{
-		vector<string> lines;
-		for (string s;;)
-		{
-			getline(inputfile, s);
-			if (inputfile.eof()) break;
-			lines.push_back(s);
-		}
-		if (inputfile.fail()) cout << "Fehler beim Einlesen" << endl;
-		inputfile.close();
-		return lines;
-	}
+	Reader(const char* path) : path(path) {}
+	vector<string> read();
 };
 
 
