@@ -19,6 +19,9 @@
     <Filter Include="Source Files\IO">
       <UniqueIdentifier>{beabd065-84ce-4710-849a-dd2a14bdfbae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Tests">
+      <UniqueIdentifier>{76b4aa58-6461-4274-8429-cc7bfc719780}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="Writer.h">
       <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IOTests.h">
+      <Filter>Header Files\Tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

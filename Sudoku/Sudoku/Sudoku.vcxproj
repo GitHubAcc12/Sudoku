@@ -151,6 +151,7 @@
     <ClCompile Include="Writer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IOTests.h" />
     <ClInclude Include="Reader.h" />
     <ClInclude Include="Writer.h" />
   </ItemGroup>
