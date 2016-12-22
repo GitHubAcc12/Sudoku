@@ -1,39 +1,18 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
-#include <string>
-#include <sstream>
-using namespace std;
 
+void split(const string& s, char delim, vector<string>& elems);
 
+string* split(const string& s, char delim);
 
-void split(const string& s, char delim, vector<string>& elems)
-{
-	stringstream ss;
-	ss.str(s);
-	string item;
-	while (getline(ss, item, delim))
-	{
-		elems.push_back(item);
-	}
-}
+string delete_char(const string& s, char sign);
 
-string* split(const string& s, char delim)
-{
-	vector<string> elems;
-	split(s, delim, elems);
-	return &elems[0];
-}
+bool row_contains(const int(&sudoku)[9][9], int row, int num);
 
-string delete_char(const string& s, char sign)
-{
-	string ret;
-	for (size_t i = 0; i < s.size(); ++i)
-	{
-		if (s[i] != sign) ret += s[i];
-	}
-	return ret;
-}
+bool col_contains(const int(&sudoku)[9][9], int col, int num);
+
+bool squ_contains(const int(&sudoku)[9][9], int idx, int num);
 
 
 #endif

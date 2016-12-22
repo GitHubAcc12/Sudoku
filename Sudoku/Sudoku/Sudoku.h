@@ -16,6 +16,9 @@ private:
 public:
 	Sudoku(const vector<string>& lines);
 	string tostring() const;
+	void solve();
+	bool is_solved() const;
+	bool contains(int num, int row, int col, int idx) const;
 };
 
 
