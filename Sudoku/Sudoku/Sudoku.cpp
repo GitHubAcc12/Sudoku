@@ -33,21 +33,38 @@ string Sudoku::tostring() const
 }
 
 
-bool Sudoku::is_solved() const
+bool Sudoku::is_solved(int &row, int &col) const
 {
-	for (int i = 0; i < 9; ++i)
+	for (row = 0; row < 9; ++row)
 	{
-		if (col_contains(sudoku, i, 0)) return false;
+		for (col = 0; col < 9; ++col)
+		{
+			if (sudoku[row][col] == 0) return false;
+		}
 	}
 	return true;
 }
 
-bool Sudoku::contains(int num, int row, int col, int idx) const
+bool Sudoku::num_fits(int num, int row, int col) const
 {
-	return row_contains(sudoku, row, num) || col_contains(sudoku, col, num) || squ_contains(sudoku, idx, num);
+	return !(row_contains(sudoku, row, num) || col_contains(sudoku, col, num) || squ_contains(sudoku, row - (row % 3), col - (col % 3), num));
 }
 
-void Sudoku::solve()
+bool Sudoku::solve()
 {
-
+	int row, col;
+	if (this->is_solved(row, col)) return true;
+	else
+	{
+		for (int k = 1; k < 10; ++k)
+		{
+			if (num_fits(k, row, col))
+			{
+				sudoku[row][col] = k;
+				if (this->solve()) return true;
+				sudoku[row][col] = 0;
+			}
+		}
+		return false;
+	}
 }

@@ -51,11 +51,11 @@ bool col_contains(const int(&sudoku)[9][9], int col, int num)
 	return false;
 }
 
-bool squ_contains(const int(&sudoku)[9][9], int idx, int num)
+bool squ_contains(const int(&sudoku)[9][9], int row, int col, int num)
 {
-	for (int i = idx; i < 3; ++i)
+	for (int i = row; i < 3; ++i)
 	{
-		for (int j = idx; j < 3; ++j)
+		for (int j = col; j < 3; ++j)
 		{
 			if (sudoku[i][j] == num) return true;
 		}

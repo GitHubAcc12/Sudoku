@@ -12,7 +12,7 @@ bool row_contains(const int(&sudoku)[9][9], int row, int num);
 
 bool col_contains(const int(&sudoku)[9][9], int col, int num);
 
-bool squ_contains(const int(&sudoku)[9][9], int idx, int num);
+bool squ_contains(const int(&sudoku)[9][9], int row, int col, int num);
 
 
 #endif

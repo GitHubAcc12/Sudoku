@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Sudoku.h"
 
 using namespace std;
 
@@ -12,11 +13,12 @@ class Writer
 {
 private:
 	const char* path;
+	void clear();
 
 public:
 	Writer(const char* path) : path(path) {}
 	void write(const vector<string>& lines);
-	void clear();
+	void write(const int arr[9][9]);
 };
 
 
