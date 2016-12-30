@@ -7,19 +7,15 @@
 #include <string>
 
 
-
-
-
-
 int main()
 {
-	auto path = "Sudoku1.txt";
-	Reader r(path);
+	auto file = "Sudoku1.txt";
+	Reader r(file);
 	auto& v = r.read();
 	Sudoku s(v);
 	cout << s.tostring() << endl;
 	s.solve();
-	path = "output.txt";
-	Writer w(path);
+	file = "output.txt";
+	Writer w(file);
 	w.write(s.sudoku);
 }

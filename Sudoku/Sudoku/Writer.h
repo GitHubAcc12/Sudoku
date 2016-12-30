@@ -1,10 +1,13 @@
 #ifndef WRITER_H
 #define WRITER_H
 
+
 #include <fstream>
 #include <iostream>
 #include <vector>
 #include <string>
+
+
 #include "Sudoku.h"
 
 using namespace std;
