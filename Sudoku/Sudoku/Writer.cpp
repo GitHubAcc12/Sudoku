@@ -5,10 +5,12 @@
 #include <string>
 #include "Sudoku.h"
 
+using namespace std;
+
 
 void Writer::write(const vector<string>& lines)
 {
-	this->clear();
+	clear();
 	ofstream outputfile(path, ios::app);
 	for (int i = 0; i < lines.size() - 1; ++i)
 	{
@@ -22,7 +24,7 @@ void Writer::write(const vector<string>& lines)
 
 void Writer::write(const int arr[9][9])
 {
-	this->clear();
+	clear();
 	ofstream outputfile(path, ios::app);
 	for (int i = 0; i < 9; ++i)
 	{

@@ -19,9 +19,6 @@
     <Filter Include="Source Files\IO">
       <UniqueIdentifier>{beabd065-84ce-4710-849a-dd2a14bdfbae}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Tests">
-      <UniqueIdentifier>{76b4aa58-6461-4274-8429-cc7bfc719780}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Algorithm">
       <UniqueIdentifier>{a7a21dc0-0868-420c-9081-2f884e5a4993}</UniqueIdentifier>
     </Filter>
@@ -52,9 +49,6 @@
     </ClInclude>
     <ClInclude Include="Writer.h">
       <Filter>Header Files\IO</Filter>
-    </ClInclude>
-    <ClInclude Include="IOTests.h">
-      <Filter>Header Files\Tests</Filter>
     </ClInclude>
     <ClInclude Include="Sudoku.h">
       <Filter>Header Files\Algorithm</Filter>

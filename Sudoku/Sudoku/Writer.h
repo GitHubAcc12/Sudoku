@@ -10,7 +10,6 @@
 
 #include "Sudoku.h"
 
-using namespace std;
 
 class Writer
 {
@@ -20,7 +19,7 @@ private:
 
 public:
 	Writer(const char* path) : path(path) {}
-	void write(const vector<string>& lines);
+	void write(const std::vector<std::string>& lines);
 	void write(const int arr[9][9]);
 };
 

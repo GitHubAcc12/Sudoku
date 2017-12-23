@@ -14,9 +14,9 @@ vector<string> Reader::read()
 		{
 			getline(inputfile, s);
 			lines.push_back(s);
-			if (inputfile.eof()) break;
+			if (inputfile.fail()) break;
 		}
-		if (inputfile.fail()) cout << "Fehler beim Einlesen" << endl;
+		if (!inputfile.eof()) cout << "Fehler beim Einlesen" << endl;
 		inputfile.close();
 		return lines;
 }

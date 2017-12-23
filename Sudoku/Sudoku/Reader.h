@@ -4,7 +4,6 @@
 #include <fstream>
 #include <vector>
 
-using namespace std;
 
 class Reader
 {
@@ -13,7 +12,7 @@ private:
 
 public:
 	Reader(const char* path) : path(path) {}
-	vector<string> read();
+	std::vector<std::string> read();
 };
 
 

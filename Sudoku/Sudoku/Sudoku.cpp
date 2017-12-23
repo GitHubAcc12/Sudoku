@@ -7,9 +7,9 @@
 using namespace std;
 
 
-Sudoku::Sudoku(const vector<string>& lines)
+Sudoku::Sudoku(const vector<string>& values)
 {
-	this->lines = lines;
+	lines = values;
 	int i = 0;
 	for (const string& line : lines)
 	{
@@ -53,7 +53,7 @@ bool Sudoku::num_fits(int num, int row, int col) const
 bool Sudoku::solve()
 {
 	int row, col;
-	if (this->is_solved(row, col)) return true;
+	if (is_solved(row, col)) return true;
 	else
 	{
 		for (int k = 1; k < 10; ++k)
@@ -61,7 +61,7 @@ bool Sudoku::solve()
 			if (num_fits(k, row, col))
 			{
 				sudoku[row][col] = k;
-				if (this->solve()) return true;
+				if (solve()) return true;
 				sudoku[row][col] = 0;
 			}
 		}
