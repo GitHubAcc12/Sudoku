@@ -2,6 +2,8 @@
 #include <sstream>
 #include <vector>
 
+#include "Tools.h"
+
 using namespace std;
 
 
@@ -33,31 +35,31 @@ string delete_char(const string& s, char sign)
 	return ret;
 }
 
-bool row_contains(const int(&sudoku)[9][9], int row, int num)
+bool row_contains(const sudoku& s, int row, int num)
 {
 	for (int i = 0; i < 9; ++i)
 	{
-		if (sudoku[row][i] == num) return true;
+		if (s[row][i] == num) return true;
 	}
 	return false;
 }
 
-bool col_contains(const int(&sudoku)[9][9], int col, int num)
+bool col_contains(const sudoku& s, int col, int num)
 {
 	for (int i = 0; i < 9; ++i)
 	{
-		if (sudoku[i][col] == num) return true;
+		if (s[i][col] == num) return true;
 	}
 	return false;
 }
 
-bool squ_contains(const int(&sudoku)[9][9], int row, int col, int num)
+bool squ_contains(const sudoku& s, int row, int col, int num)
 {
 	for (int i = row; i < 3; ++i)
 	{
 		for (int j = col; j < 3; ++j)
 		{
-			if (sudoku[i][j] == num) return true;
+			if (s[i][j] == num) return true;
 		}
 	}
 	return false;

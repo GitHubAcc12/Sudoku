@@ -13,8 +13,8 @@ vector<string> Reader::read()
 		for (string s;;)
 		{
 			getline(inputfile, s);
-			lines.push_back(s);
 			if (inputfile.fail()) break;
+			lines.push_back(s);
 		}
 		if (!inputfile.eof()) cout << "Fehler beim Einlesen" << endl;
 		inputfile.close();

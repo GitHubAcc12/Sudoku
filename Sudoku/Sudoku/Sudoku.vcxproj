@@ -160,7 +160,6 @@
     <ClInclude Include="Writer.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="output.txt" />
     <Text Include="Sudoku1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,6 +2,7 @@
 #define SUDOKU_H
 
 #include <vector>
+#include <array>
 #include <string>
 
 
@@ -14,7 +15,7 @@ private:
 	bool num_fits(int num, int row, int col) const;
 
 public:
-	int sudoku[9][9];
+	std::array<std::array<int, 9>, 9> sudoku;
 	Sudoku(const std::vector<std::string>& lines);
 	std::string tostring() const;
 	bool solve();

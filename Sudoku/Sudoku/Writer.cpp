@@ -1,4 +1,5 @@
 #include "Writer.h"
+#include "Tools.h"
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -22,7 +23,7 @@ void Writer::write(const vector<string>& lines)
 }
 
 
-void Writer::write(const int arr[9][9])
+void Writer::write(const sudoku& arr)
 {
 	clear();
 	ofstream outputfile(path, ios::app);

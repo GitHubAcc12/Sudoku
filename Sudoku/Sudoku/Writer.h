@@ -7,7 +7,7 @@
 #include <vector>
 #include <string>
 
-
+#include "Tools.h"
 #include "Sudoku.h"
 
 
@@ -20,7 +20,7 @@ private:
 public:
 	Writer(const char* path) : path(path) {}
 	void write(const std::vector<std::string>& lines);
-	void write(const int arr[9][9]);
+	void write(const sudoku&);
 };
 
 
