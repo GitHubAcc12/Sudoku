@@ -22,15 +22,6 @@ Sudoku::Sudoku(const vector<string>& values)
 	}
 }
 
-string Sudoku::tostring() const
-{
-	string s;
-	for (const string& line : lines)
-	{
-		s += line + "\n";
-	}
-	return s.substr(0, s.size() - 1);
-}
 
 
 bool Sudoku::is_solved(int &row, int &col) const

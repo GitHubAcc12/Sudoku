@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <array>
+#include <iostream>
 #include <string>
 
 
@@ -17,7 +18,14 @@ private:
 public:
 	std::array<std::array<int, 9>, 9> sudoku;
 	Sudoku(const std::vector<std::string>& lines);
-	std::string tostring() const;
+	friend std::ostream& operator<<(std::ostream& out, const Sudoku& s)
+	{
+		for (const std::string& line : s.lines)
+		{
+			out << line + '\n';
+		}
+		return out;
+	}
 	bool solve();
 };
 

@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 	Reader r(file.c_str());
 	auto& v = r.read();
 	Sudoku s(v);
-	cout << s.tostring() << endl;
+	cout << s << endl;
 	s.solve();
 	file = "output.txt";
 	Writer w(file.c_str());
